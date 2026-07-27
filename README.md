@@ -4,7 +4,7 @@
 
 [mario.espinosa.perales@gmail.com](mailto:mario.espinosa.perales@gmail.com) · [GitHub](https://github.com/marioespinosaperales)
 
-I do not look for better dashboards. I make data a competitive advantage for the ecosystem — closing the gap between public blockchain/API data and **accountable, institutional-grade semantics**.
+I do not look for better dashboards. I make data a competitive advantage for the ecosystem. Ii am responsible for closing the gap between public blockchain/API data and **accountable, institutional-grade semantics**.
 
 ---
 
