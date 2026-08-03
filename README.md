@@ -4,13 +4,11 @@
 
 [mario.espinosa.perales@gmail.com](mailto:mario.espinosa.perales@gmail.com) · [GitHub](https://github.com/marioespinosaperales)
 
-I do not look for better dashboards. I make data a competitive advantage for the ecosystem. Ii am responsible for closing the gap between public blockchain/API data and **accountable, institutional-grade semantics**.
+I do not look for better dashboards. I make data a competitive advantage for the ecosystem — closing the gap between public blockchain/API data and **accountable, institutional-grade semantics**.
 
 ---
 
 ## Selected work
-
-### Data track (Allium-aligned)
 
 Three public projects that map to the institutional blockchain-data loop: **raw fragmented inputs → semantic models → maintainable SQL/dbt → quality methodology**.
 
@@ -20,25 +18,13 @@ Three public projects that map to the institutional blockchain-data loop: **raw 
 | **[lp-history-reconstructor](https://github.com/marioespinosaperales/lp-history-reconstructor)** | Uniswap V3 LP event sourcing, NPM wallet attribution, on-chain verify (`liquidity` / `positions`), fees & IL vs HODL by range width | [Repo](https://github.com/marioespinosaperales/lp-history-reconstructor) · [Dashboard](https://lp-history-reconstructor.vercel.app/) |
 | **[dex-trades-canonical](https://github.com/marioespinosaperales/dex-trades-canonical)** | Canonical `dex.trades` across Eth / Base / Arbitrum / Avalanche (Uniswap + Camelot / Aerodrome / Pharaoh); dust & self-churn **flagged, not deleted** | [Repo](https://github.com/marioespinosaperales/dex-trades-canonical) · [Dashboard](https://dex-trades-canonical.vercel.app) |
 
-**How they fit together:** (1) infra & contracts → (2) on-chain decode + verify → (3) cross-chain semantic grain. Stack: Python, Parquet, DuckDB, dbt, Evidence, CI.
+### How they fit together
 
-### DevTools track (Nomic-aligned)
+1. **crypto-market-elt** — infra, data contracts, orchestration  
+2. **lp-history-reconstructor** — on-chain decode + state fold + verification  
+3. **dex-trades-canonical** — cross-chain/protocol semantic abstraction (`chain × protocol × pool`)
 
-EM narrative: **extensibility (plugins) → DX tools → OSS → meta-infra literacy (EDR / Slang)**.
-
-Monorepo: **[hardhat-devtools-lab](https://github.com/marioespinosaperales/hardhat-devtools-lab)** (Hardhat 3, pnpm, Node 22+).
-
-| # | Deliverable | What it demonstrates | Links |
-|---|---|---|---|
-| 1 | **hardhat-semantic-events** | Capture/decode logs → canonical JSON grain; task `semantic-events export` | [plugin](https://github.com/marioespinosaperales/hardhat-devtools-lab/tree/main/packages/hardhat-semantic-events) |
-| 2 | **hardhat-fixture-replay** | Record tx sequences from a run and replay; determinism/debug DX notes | [plugin](https://github.com/marioespinosaperales/hardhat-devtools-lab/tree/main/packages/hardhat-fixture-replay) |
-| 3 | **Hardhat OSS PR** | Upstream docs/bug contribution to NomicFoundation/hardhat | [oss log](https://github.com/marioespinosaperales/hardhat-devtools-lab/blob/main/docs/oss-contributions.md) |
-| 4 | **hardhat-network-profiler** | Per-run gas + call-trace summary export | [plugin](https://github.com/marioespinosaperales/hardhat-devtools-lab/tree/main/packages/hardhat-network-profiler) |
-| 5 | **ADR Hardhat Network ↔ EDR** | Literacy doc: what EDR owns vs Hardhat plugin surface | [ADR](https://github.com/marioespinosaperales/hardhat-devtools-lab/blob/main/docs/hardhat-network-edr.md) |
-| 6 | **EDR contrib** | Small upstream PR (docs/test/spec note) | [oss log](https://github.com/marioespinosaperales/hardhat-devtools-lab/blob/main/docs/oss-contributions.md) |
-| 7 | **Slang contrib** | Small upstream PR (docs/grammar fixture) | [oss log](https://github.com/marioespinosaperales/hardhat-devtools-lab/blob/main/docs/oss-contributions.md) |
-
-Honest framing: plugin ownership + OSS process on Hardhat; EDR/Slang = meta-infra literacy with scoped contributions — not overnight IC Rust EVM depth.
+Shared stack: Python, Parquet, DuckDB, dbt, Evidence, CI — secrets only via env vars.
 
 ---
 
@@ -103,4 +89,4 @@ Honest framing: plugin ownership + OSS process on Hardhat; EDR/Slang = meta-infr
 
 ---
 
-*Data repos map to production patterns: contracts at ingestion, canonical grains, documented methodology, and live Evidence dashboards. DevTools repos map to Hardhat 3 extensibility, DX loops, and Nomic meta-infra literacy (EDR / Slang).*
+*Repos in this portfolio map to production patterns: contracts at ingestion, canonical grains, documented methodology, and live Evidence dashboards.*
