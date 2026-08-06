@@ -37,7 +37,7 @@ Shared stack: Python, Parquet, DuckDB, dbt, Evidence, CI — secrets only via en
 
 ## Experience
 
-### Avalanche Foundation — Lead Data Engineering  
+### Avalanche Foundation — Head Data & ML
 *Dec 2024 – May 2026 · Remote*
 
 - Architected high-throughput API / sub-second blockchain ingestion for real-time crypto decisioning.
@@ -47,7 +47,7 @@ Shared stack: Python, Parquet, DuckDB, dbt, Evidence, CI — secrets only via en
 - Directed autonomous risk-mitigation agents end-to-end → **+$15M USD** P&L optimization.
 - Drove AI-native engineering culture (Cursor / Claude Code) and hub-and-spoke pipeline modularity.
 
-### Citibanamex (Citibank) — SVP, Data Engineering  
+### Citibanamex (Citibank) — SVP, Data   
 *Sep 2023 – Dec 2024 · Mexico*
 
 - Led a team of **20** data engineers; drove large annual development cost savings.
