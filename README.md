@@ -10,21 +10,28 @@ I do not look for better dashboards. I make data a competitive advantage for the
 
 ## Selected work
 
-Three public projects that map to the institutional blockchain-data loop: **raw fragmented inputs → semantic models → maintainable SQL/dbt → quality methodology**.
+Three public projects that map the institutional blockchain-data loop:
+**raw fragmented inputs → semantic models → maintainable SQL/dbt → quality methodology → measurable metric impact**.
 
 | Project | What it demonstrates | Links |
 |---|---|---|
-| **[crypto-market-elt](https://github.com/marioespinosaperales/crypto-market-elt)** | Production ELT: CoinGecko + Binance → Parquet → DuckDB → dbt marts, pandera contracts, Dagster + hourly GitHub Actions | [Repo](https://github.com/marioespinosaperales/crypto-market-elt) · [Dashboard](https://crypto-market-elt-git-data-marioespinosaperales-projects.vercel.app/) |
-| **[lp-history-reconstructor](https://github.com/marioespinosaperales/lp-history-reconstructor)** | Uniswap V3 LP event sourcing, NPM wallet attribution, on-chain verify (`liquidity` / `positions`), fees & IL vs HODL by range width | [Repo](https://github.com/marioespinosaperales/lp-history-reconstructor) · [Dashboard](https://lp-history-reconstructor.vercel.app/) |
-| **[dex-trades-canonical](https://github.com/marioespinosaperales/dex-trades-canonical)** | Canonical `dex.trades` across Eth / Base / Arbitrum / Avalanche (Uniswap + Camelot / Aerodrome / Pharaoh); dust & self-churn **flagged, not deleted** | [Repo](https://github.com/marioespinosaperales/dex-trades-canonical) · [Dashboard](https://dex-trades-canonical.vercel.app) |
+| **[crypto-market-elt](https://github.com/marioespinosaperales/crypto-market-elt)** | Production ELT with pandera contracts, DuckDB + dbt marts, Dagster / hourly Actions, QC scorecard, IsolationForest anomaly QC, naive vs ARIMA forecast eval, and a quasi-experimental OHLCV event study | [Repo](https://github.com/marioespinosaperales/crypto-market-elt) · [Dashboard](https://crypto-market-elt-git-data-marioespinosaperales-projects.vercel.app/) · [RESEARCH](https://github.com/marioespinosaperales/crypto-market-elt/blob/main/RESEARCH.md) |
+| **[lp-history-reconstructor](https://github.com/marioespinosaperales/lp-history-reconstructor)** | Uniswap V3 LP event sourcing, NPM wallet attribution, on-chain verify (`liquidity` / `positions`), fees & IL vs HODL by range width with clear-exit trust rules | [Repo](https://github.com/marioespinosaperales/lp-history-reconstructor) · [Dashboard](https://lp-history-reconstructor.vercel.app/) |
+| **[dex-trades-canonical](https://github.com/marioespinosaperales/dex-trades-canonical)** | Canonical `dex.trades` across Eth / Base / Arbitrum / Avalanche (Uniswap + Camelot / Aerodrome / Pharaoh); dust & self-churn **flagged, not deleted**; orderflow/MEV-lite proxies; PBS `feeRecipient`; live Alchemy snapshot with QC benchmarks + inference | [Repo](https://github.com/marioespinosaperales/dex-trades-canonical) · [Dashboard](https://dex-trades-canonical.vercel.app/) · [Benchmarks](https://dex-trades-canonical.vercel.app/benchmarks) · [Orderflow](https://dex-trades-canonical.vercel.app/orderflow) · [RESEARCH](https://github.com/marioespinosaperales/dex-trades-canonical/blob/main/RESEARCH.md) |
 
 ### How they fit together
 
-1. **crypto-market-elt** — infra, data contracts, orchestration  
-2. **lp-history-reconstructor** — on-chain decode + state fold + verification  
-3. **dex-trades-canonical** — cross-chain/protocol semantic abstraction (`chain × protocol × pool`)
+1. **crypto-market-elt** — ingestion contracts, orchestration, forecast/event-study hygiene  
+2. **lp-history-reconstructor** — on-chain decode + state fold + ground-truth verification  
+3. **dex-trades-canonical** — cross-chain/protocol semantic abstraction + label impact on volume / orderflow metrics
 
 Shared stack: Python, Parquet, DuckDB, dbt, Evidence, CI — secrets only via env vars.
+
+### Measurement surfaces (live)
+
+- **crypto:** market overview + OHLCV marts; research artifacts for timeseries and event-study  
+- **lp:** fees / IL by range width with clear-exit caveats  
+- **dex:** clean vs total volume, dust-threshold sensitivity, orderflow proxy rates, Wilson/bootstrap/Mann–Whitney/χ² on the [Benchmarks](https://dex-trades-canonical.vercel.app/benchmarks) page; structural proxies on [Orderflow](https://dex-trades-canonical.vercel.app/orderflow)
 
 ---
 
@@ -81,7 +88,7 @@ Shared stack: Python, Parquet, DuckDB, dbt, Evidence, CI — secrets only via en
 
 **Cloud:** AWS (S3, Redshift, Glue, Lambda, CDK), Azure (ADF, Databricks), GCP  
 
-**Web3 analytics:** on-chain pipelines, DeFi / tokenomics, Allium, Dune, Flipside, Kaiko, TRM  
+**Web3 analytics:** on-chain pipelines, DeFi / tokenomics, market-structure proxies, Allium, Dune, Flipside, Kaiko, TRM  
 
 **ML:** NumPy, Pandas, scikit-learn, TensorFlow, PyTorch  
 
@@ -89,4 +96,4 @@ Shared stack: Python, Parquet, DuckDB, dbt, Evidence, CI — secrets only via en
 
 ---
 
-*Repos in this portfolio map to production patterns: contracts at ingestion, canonical grains, documented methodology, and live Evidence dashboards.*
+*Repos in this portfolio map to production patterns: contracts at ingestion, canonical grains, documented methodology, live Evidence dashboards, and explicit measurement of how quality labels move metrics.*
