@@ -1,6 +1,6 @@
 # Mario Espinosa
 
-**Lead Data Engineer | Institutional Web3 & Systems Architect**
+**Head of Data | Institutional Web3 & Systems Architect**
 
 [mario.espinosa.perales@gmail.com](mailto:mario.espinosa.perales@gmail.com) · [GitHub](https://github.com/marioespinosaperales)
 
